@@ -25,7 +25,7 @@ au('ColorScheme', {
     local fd = assert(io.open(vim.g.color_cache, 'w+'))
     fd:write(vim.g.colors_name)
     fd:close()
-    require('util').ls('/run/user/1000/', function(path, name, type)
+    require('broker.util').ls('/run/user/1000/', function(path, name, type)
       if path ~= vim.v.servername and name:match('nvim') and type == 'socket' then
         vim.system {
           'nvim',
