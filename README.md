@@ -3,9 +3,7 @@
 
 Broadcast config for running nvim instances via rpc socket.
 
-
-https://github.com/phanen/broker.nvim/assets/91544758/10bfd5f4-0511-4590-b0cb-77719ce99930
-
+[mp4: showcase](https://github.com/phanen/broker.nvim/assets/91544758/10bfd5f4-0511-4590-b0cb-77719ce99930)
 
 ## TODO
 * [x] Persistant/Broadcast colorscheme.
