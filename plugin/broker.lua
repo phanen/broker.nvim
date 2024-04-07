@@ -22,10 +22,14 @@ au('ColorScheme', {
     if not vim.g.focuesd then
       return
     end
-    local fd = assert(io.open(vim.g.color_cache, 'w+'))
+
+    local u = require('broker.util')
+    local color_cache = vim.g.color_cache or vim.fs.joinpath(u.stdpath['cache'], 'color_name')
+    local fd = assert(io.open(color_cache, 'w+'))
     fd:write(vim.g.colors_name)
     fd:close()
-    require('broker.util').ls('/run/user/1000/', function(path, name, type)
+
+    u.ls('/run/user/1000/', function(path, name, type)
       if path ~= vim.v.servername and name:match('nvim') and type == 'socket' then
         vim.system {
           'nvim',
