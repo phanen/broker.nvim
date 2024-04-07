@@ -13,6 +13,12 @@ util.stdpath = setmetatable({}, {
   end,
 })
 
+util.write_str = function(filename, str)
+  local fd = assert(io.open(filename, 'w+'))
+  fd:write(str)
+  fd:close()
+end
+
 util.ls = function(path, fn)
   local handle = vim.uv.fs_scandir(path)
   while handle do

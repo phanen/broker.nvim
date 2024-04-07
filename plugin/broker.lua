@@ -25,9 +25,7 @@ au('ColorScheme', {
 
     local u = require('broker.util')
     local color_cache = vim.g.color_cache or vim.fs.joinpath(u.stdpath['cache'], 'color_name')
-    local fd = assert(io.open(color_cache, 'w+'))
-    fd:write(vim.g.colors_name)
-    fd:close()
+    u.write_str(color_cache, vim.g.colors_name)
 
     u.ls('/run/user/1000/', function(path, name, type)
       if path ~= vim.v.servername and name:match('nvim') and type == 'socket' then
