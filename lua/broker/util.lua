@@ -1,18 +1,5 @@
 local util = {}
 
-util.stdpath = setmetatable({}, {
-  __index = function(t, k)
-    local path = vim.fn.stdpath(k)
-    if type(path) == 'table' then
-      path = path[1]
-    end
-    assert(path)
-    vim.fn.mkdir(path, 'p')
-    t[k] = path
-    return path
-  end,
-})
-
 util.write_str = function(filename, str)
   local fd = assert(io.open(filename, 'w+'))
   fd:write(str)
