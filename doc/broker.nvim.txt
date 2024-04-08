@@ -1,9 +1,10 @@
-*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 07
+*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 08
 
 ==============================================================================
 Table of Contents                              *broker.nvim-table-of-contents*
 
 1. broker.nvim                                       |broker.nvim-broker.nvim|
+  - install                                  |broker.nvim-broker.nvim-install|
   - TODO                                        |broker.nvim-broker.nvim-todo|
 2. Links                                                   |broker.nvim-links|
 
@@ -16,6 +17,21 @@ Broadcast config for running nvim instances via rpc socket.
 
 mp4: showcase
 <https://github.com/phanen/broker.nvim/assets/91544758/10bfd5f4-0511-4590-b0cb-77719ce99930>
+
+
+INSTALL                                      *broker.nvim-broker.nvim-install*
+
+Use `lazy.nvim`
+
+>lua
+    {
+      'phanen/broker.nvim',
+      event = 'ColorScheme',
+      init = function()
+        require('broker.entry').init()
+      end,
+    },
+<
 
 
 TODO                                            *broker.nvim-broker.nvim-todo*
