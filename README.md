@@ -17,4 +17,5 @@ Use `lazy.nvim`:
 
 ## TODO
 * [x] Persistant/Broadcast colorscheme.
-* [ ] Provide a command to broadcast any command.
+* [ ] Provide a command to broadcast any command (seems useless)
+* [ ] Get all session files
