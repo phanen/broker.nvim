@@ -1,9 +1,7 @@
 local M = {}
 
 M.set_color = function()
-  if not vim.g.is_broker then
-    return
-  end
+  if not vim.g.is_broker then return end
 
   -- entry will be loaded first, so why not just cache opts there
   local colors_name_path = package.loaded['broker.entry'].colors_name_path
@@ -22,9 +20,7 @@ M.set_color = function()
         vim.system { 'nvim', '-u', 'NONE', '--server', path, '--remote-send', rpc_cmd }
     end
   end)
-  vim.iter(tasks):each(function(task)
-    task:wait()
-  end)
+  vim.iter(tasks):each(function(task) task:wait() end)
 end
 
 return M

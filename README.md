@@ -11,9 +11,7 @@ Use `lazy.nvim`:
 {
   'phanen/broker.nvim',
   event = 'ColorScheme',
-  init = function()
-    require('broker.entry').init()
-  end,
+  init = function() require('broker.entry').init() end,
 },
 ```
 
