@@ -1,7 +1,10 @@
 local M = {}
 
 M.set_color = function()
-  if not vim.g.is_broker then return end
+  -- workaround to avoid a nested nvim broker
+  -- TODO: figure out a way to tell apart nested/non-nested case
+  -- we need to select out one broker only
+  if not vim.g.is_broker or vim.env.NVIM then return end
 
   -- entry will be loaded first, so why not just cache opts there
   local colors_name_path = package.loaded['broker.entry'].colors_name_path
