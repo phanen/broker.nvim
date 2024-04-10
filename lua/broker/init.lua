@@ -14,7 +14,10 @@ M.set_color = function()
 
   local rpc_cmd = ('<cmd>colorscheme %s<cr>'):format(colors_name)
 
-  u.ls('/run/user/1000/', function(path, name, type)
+  -- refer to `server_address_new`
+  -- the default servername is $XDG_RUNTIME_DIR/<name>.<pid>.<counter>
+  local address_dir = vim.fn.stdpath('run')
+  u.ls(address_dir, function(path, name, type)
     if path ~= vim.v.servername and name:match('nvim') and type == 'socket' then
       tasks[#tasks + 1] =
         vim.system { 'nvim', '-u', 'NONE', '--server', path, '--remote-send', rpc_cmd }
