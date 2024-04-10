@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/phanen/broker.nvim/compare/v1.0.0...v1.0.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* don't search server socket in hardcode path ([00b9607](https://github.com/phanen/broker.nvim/commit/00b960749ca1720c70288bd0ace964762454d7f3))
+* skip in termial so that there's only one broker ([8189e8e](https://github.com/phanen/broker.nvim/commit/8189e8ed64e16812d648c2943b5273f30576dd4d))
+
 ## 1.0.0 (2024-04-07)
 
 
