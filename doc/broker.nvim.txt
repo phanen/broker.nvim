@@ -1,4 +1,4 @@
-*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 08
+*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 10
 
 ==============================================================================
 Table of Contents                              *broker.nvim-table-of-contents*
@@ -27,9 +27,7 @@ Use `lazy.nvim`
     {
       'phanen/broker.nvim',
       event = 'ColorScheme',
-      init = function()
-        require('broker.entry').init()
-      end,
+      init = function() require('broker.entry').init() end,
     },
 <
 
@@ -37,7 +35,8 @@ Use `lazy.nvim`
 TODO                                            *broker.nvim-broker.nvim-todo*
 
 - Persistant/Broadcast colorscheme.
-- Provide a command to broadcast any command.
+- Provide a command to broadcast any command (seems useless)
+- Get all session files
 
 ==============================================================================
 2. Links                                                   *broker.nvim-links*
