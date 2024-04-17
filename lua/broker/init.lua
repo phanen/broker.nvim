@@ -1,6 +1,6 @@
 local M = {}
 
-M.set_color = function()
+M.set_color = function(args)
   -- workaround to avoid a nested nvim broker
   -- TODO: figure out a way to tell apart nested/non-nested case
   -- we need to select out one broker only
@@ -10,8 +10,8 @@ M.set_color = function()
   local colors_name_path = package.loaded['broker.entry'].colors_name_path
   local u = require('broker.util')
 
-  local colors_name = vim.g.colors_name
-  u.write_str(colors_name_path, vim.g.colors_name)
+  local colors_name = args.match
+  u.write_str(colors_name_path, colors_name)
 
   local tasks = {}
 

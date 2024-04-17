@@ -9,4 +9,4 @@ au({ 'VimEnter', 'FocusGained' }, { command = [[let g:is_broker = v:true]] })
 
 au('FocusLost', { command = [[let g:is_broker = v:false]] })
 
-au('ColorScheme', { command = [[lua require('broker').set_color()]] })
+au('ColorScheme', { callback = function(args) require('broker').set_color(args) end })
