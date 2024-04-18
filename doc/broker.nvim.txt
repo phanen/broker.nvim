@@ -1,4 +1,4 @@
-*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 10
+*broker.nvim.txt*        For Neovim >= 0.8.0        Last change: 2024 April 18
 
 ==============================================================================
 Table of Contents                              *broker.nvim-table-of-contents*
